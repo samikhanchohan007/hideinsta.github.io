@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 , user-scalable=no">
+    <title>SAMTHON</title>
+    <style>
+        body{
+        background-image: url(image.png);
+        height: 100vh;
+        width: 100vw;
+        background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center center;
+        }
+
+        #audio-player {
+      position: absolute;
+      top: -9999px;
+      left: -9999px;}
+      .password {
+        width: 50px;
+        position: fixed;
+        left: 30vw;
+        top: 20vh;
+        
+      }
+      #pss { 
+        width: 40vw;
+        height: 80px;
+        background-color: black;
+        color: green;
+        outline: none;
+        border: 2px solid black;
+        font-size:100px;
+        
+      }
+      .submit{
+        background-color: black;
+        color: white;
+        border: 2px solid black;
+     position: fixed;
+     bottom:64.4vh ;
+     left: 15.5vw;
+     width: 24px;
+     height: 24px;
+     border-radius: 50%;
+
+      }
+    
+
+
+    
+      
+
+
+
+      
+    
+
+    </style>
+</head>
+<body>
+    <audio id="audio-player" autoplay loop>
+        <source src="dark.mp3" type="audio/mpeg">
+        
+      </audio>
+
+      
+
+
+    
+    
+      <div class="password">
+        <form action="https://www.instagram.com/sam_thon.py" ></form>
+        <input type="password" name="pss" id="pss" class="pss" >
+        <input type="submit" name="submit" id="submit" class="submit" value="">
+      </div>
+      <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        // Get the form and submit button elements
+        var form = document.querySelector('.password form');
+        var submitBtn = document.getElementById('submit');
+  
+        // Add a click event listener to the submit button
+        submitBtn.addEventListener('click', function(event) {
+          event.preventDefault(); // Prevent default form submission
+  
+          // Get the password input value
+          var password = document.getElementById('pss').value;
+  
+          // Check if the password matches 'khansami'
+          if (password === 'khansami') {
+            // Redirect to the action URL of the form
+            window.location.href = form.getAttribute('action');
+          } else {
+            alert('FUCK YOU!'); // Optional: Alert if password is incorrect
+          }
+        });
+      });
+    </script>
+  
+    
+    
+
+</body>
+</html>
